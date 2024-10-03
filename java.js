@@ -25,4 +25,10 @@ function displayMessage(message, type) {
     const feedbackMessage = document.getElementById('feedback-message');
     feedbackMessage.textContent = message;
     feedbackMessage.className = type === 'success' ? 'feedback success' : 'feedback error';
+    feedbackMessage.style.display = 'block'; // Show the message
+
+    // Hide the message after 3 seconds
+    setTimeout(() => {
+        feedbackMessage.style.display = 'none'; // Hide the message
+    }, 3000); // 3000 milliseconds = 3 seconds
 }
