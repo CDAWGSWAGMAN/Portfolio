@@ -5,17 +5,22 @@
 
 // Function to display success or error messages
 function displayMessage(message, type) {
-    const messageContainer = document.createElement('div');
-    messageContainer.textContent = message;
-    messageContainer.className = type === 'success' ? 'success-message' : 'error-message';
-    document.body.appendChild(messageContainer);
+    const feedbackMessage = document.getElementById('feedback-message');
+    feedbackMessage.textContent = message;
+    
+    // Add the appropriate class for success or error
+    feedbackMessage.className = `feedback-message ${type}`;
+
+    feedbackMessage.style.display = 'block'; // Show the feedback message
     
     // Fade out after 3 seconds
     setTimeout(() => {
-        messageContainer.classList.add('fade-out'); // Add the fade-out class
+        feedbackMessage.classList.add('fade-out'); // Add the fade-out class
+        
         // Remove the message after the fade-out transition
         setTimeout(() => {
-            messageContainer.remove();
+            feedbackMessage.style.display = 'none'; // Hide the message
+            feedbackMessage.className = 'feedback-message'; // Reset class
         }, 500); // Wait for the transition duration
     }, 3000);
 }
