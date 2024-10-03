@@ -12,11 +12,17 @@ document.addEventListener('DOMContentLoaded', function() {
         // Send form data via EmailJS
         emailjs.sendForm('service_45rblhl', 'template_zd76i6s', this)
             .then(function() {
-                alert('Message Sent Successfully!');
-                // Optionally reset the form after submission
-                document.getElementById('contact-form').reset();
+                displayMessage('Message Sent Successfully!', 'success');
+                document.getElementById('contact-form').reset(); // Reset form after submission
             }, function(error) {
-                alert('Failed to send the message. Error: ' + JSON.stringify(error));
+                displayMessage('Failed to send the message. Error: ' + JSON.stringify(error), 'error');
             });
     });
 });
+
+// Function to display messages
+function displayMessage(message, type) {
+    const feedbackMessage = document.getElementById('feedback-message');
+    feedbackMessage.textContent = message;
+    feedbackMessage.className = type === 'success' ? 'feedback success' : 'feedback error';
+}
