@@ -10,9 +10,13 @@ function displayMessage(message, type) {
     messageContainer.className = type === 'success' ? 'success-message' : 'error-message';
     document.body.appendChild(messageContainer);
     
-    // Remove message after 3 seconds
+    // Fade out after 3 seconds
     setTimeout(() => {
-        messageContainer.remove();
+        messageContainer.classList.add('fade-out'); // Add the fade-out class
+        // Remove the message after the fade-out transition
+        setTimeout(() => {
+            messageContainer.remove();
+        }, 500); // Wait for the transition duration
     }, 3000);
 }
 
