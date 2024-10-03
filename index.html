@@ -171,26 +171,26 @@
     <!-- SECTION 4: Contact -->
     <section id="contact" class="contact-section">
       <h2>Contact</h2>
-
       <div class="group">
-        <div class="text">
-          If you have any further questions or opportunities please let me know!
-        </div>
-
-        <form id="contact-form">  
-          <label for="name">Name</label>
-          <input type="text" id="name">
-
-          <label for="email">Email</label>
-          <input type="email" id="email">
-
-          <label for="message">Message</label>
-          <textarea id="message" cols="30" rows="10"></textarea>
-
-          <button type="submit">Send Message</button>
-        </form>
+          <div class="text">
+              If you have any further questions or opportunities please let me know!
+          </div>
+          <form id="contact-form">  <!-- Added ID here -->
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+              
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+              
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+              
+              <button type="submit">Send Message</button>
+          </form>
+          <div id="feedback-message" class="feedback-message"></div> <!-- Feedback message area -->
       </div>
-    </section>
+  </section>
+  
   </main>
 <script src="java.js"></script> 
 </body>
