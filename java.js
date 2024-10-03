@@ -7,7 +7,7 @@
     event.preventDefault(); // Prevent the default form submission
   
     // Send form data via EmailJS
-    emailjs.sendForm('TrapJack1738!', 'template_serq5ct', this)
+    emailjs.sendForm('service_45rblhl', 'template_zd76i6s', this)
       .then(function() {
         alert('Message Sent Successfully!');
       }, function(error) {
