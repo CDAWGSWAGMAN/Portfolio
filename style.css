@@ -353,28 +353,3 @@
 
 
 
-.success-message, .error-message {
-    position: fixed; /* Use fixed positioning for the message */
-    top: 20px; /* Adjust the position as needed */
-    left: 50%;
-    transform: translateX(-50%); /* Center the message */
-    padding: 10px 20px;
-    border-radius: 5px;
-    z-index: 1000; /* Ensure it appears above other content */
-    transition: opacity 0.5s ease; /* Smooth transition for opacity */
-}
-
-.success-message {
-    background-color: #4CAF50; /* Green for success */
-    color: white;
-}
-
-.error-message {
-    background-color: #F44336; /* Red for error */
-    color: white;
-}
-
-.fade-out {
-  opacity: 0; /* Make it transparent */
-  transition: opacity 0.5s ease; /* Smooth transition */
-}
