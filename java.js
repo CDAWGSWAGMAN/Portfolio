@@ -1,23 +1,27 @@
 // Initialize EmailJS with your user ID
 (function() {
-    emailjs.init("9Gdu-5ZCVkaXOT0pB"); // Replace with your EmailJS User ID
+    emailjs.init("9Gdu-5ZCVkaXOT0pB");  // Replace with your EmailJS User ID
 })();
 
 // Function to display success or error messages
 function displayMessage(message, type) {
     const feedbackMessage = document.getElementById('feedback-message');
     feedbackMessage.textContent = message;
+    
+    // Add the appropriate class for success or error
+    feedbackMessage.className = `feedback-message ${type}`;
 
-    // Clear previous classes
-    feedbackMessage.className = 'feedback-message'; 
-    feedbackMessage.classList.add(type === 'success' ? 'success' : 'error'); 
-
-    // Show the feedback message
-    feedbackMessage.style.display = 'block'; 
-
+    feedbackMessage.style.display = 'block'; // Show the feedback message
+    
     // Fade out after 3 seconds
     setTimeout(() => {
-        feedbackMessage.style.display = 'none'; // Hide the message after 3 seconds
+        feedbackMessage.classList.add('fade-out'); // Add the fade-out class
+        
+        // Remove the message after the fade-out transition
+        setTimeout(() => {
+            feedbackMessage.style.display = 'none'; // Hide the message
+            feedbackMessage.className = 'feedback-message'; // Reset class
+        }, 500); // Wait for the transition duration
     }, 3000);
 }
 

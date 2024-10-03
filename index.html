@@ -24,7 +24,7 @@
     <div class="left">
       <a href="/">Carter Albers</a>
     </div>
-    
+
     <div class="right">
       <a href="https://github.com/CDAWGSWAGMAN" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-github"></i>
@@ -36,11 +36,6 @@
         <span>Linkedin</span>
       </a>
       
-      <a href="Images4website/RESUME.pdf" target="_blank" rel="noopener noreferrer">
-        <i class="fa-solid fa-file-pdf"></i>
-        <span>Resume</span>
-    </a>
-
       <a href="mailto: cmalbers21@gmail.com">
         <i class="fa-solid fa-envelope"></i>
         <span>Email</span>
@@ -174,22 +169,27 @@
     
 
     <!-- SECTION 4: Contact -->
-    <section id="contact">
+    <section id="contact" class="contact-section">
       <h2>Contact</h2>
-      <form id="contact-form">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" required />
-  
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="email" placeholder="Your Email" required />
-  
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-  
-          <button type="submit">Send Message</button>
-      </form>
-  
-      <div id="feedback-message" class="feedback-message" style="display:none;"></div>
+      <div class="group">
+          <div class="text">
+              If you have any further questions or opportunities please let me know!
+          </div>
+          <form id="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required> <!-- Add name attribute -->
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required> <!-- Add name attribute -->
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" cols="30" rows="10" required></textarea> <!-- Add name attribute -->
+            
+            <button type="submit">Send Message</button>
+        </form>
+        
+          <div id="feedback-message" class="feedback-message"></div> <!-- Feedback message area -->
+      </div>
   </section>
   
   </main>
