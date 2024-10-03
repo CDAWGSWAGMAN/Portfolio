@@ -336,6 +336,11 @@
     border-radius: 5px;
     display: none; /* Hide by default */
     transition: opacity 0.5s ease; /* Smooth transition */
+    text-align: center;
+    width: 100%; /* Make it take full width */
+    max-width: 400px; /* Optional: Limit the max width */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
 }
 
 .feedback-message.success {
